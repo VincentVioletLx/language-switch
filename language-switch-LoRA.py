@@ -129,7 +129,7 @@ trainer.model.save_pretrained("/home/nfs02/liux/Qwen1.5-1.8B-lora0720")
 wandb.finish()
 
 # 模型合并
-def apply_lora(base_model_path, lora_model_path, merged_model_path)
+def apply_lora(base_model_path, lora_model_path, merged_model_path):
     base_model = AutoModelForCausalLM.from_pretrained(base_model_path, device_map='auto')
     tokenizer = AutoTokenizer.from_pretrained(base_model_path)
     
